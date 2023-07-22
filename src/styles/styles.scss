@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../styles/theme.scss";
+@import "../assets/fonts/ibm-plex-mono/stylesheet.css";
+@import "./utils/helpers";
+
+
+// $app-typography: mat-typography-config(
+// 	$font-family: '"IBM Plex Mono", Arial, sans-serif',
+// );
+// @include mat-core($app-typography);
+
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Mono', sans-serif;
+    /* Add any other custom styles for headings */
+  }
+
+
+
+
+:host {
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
