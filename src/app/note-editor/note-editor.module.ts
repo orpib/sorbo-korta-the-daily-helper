@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { NoteEditorComponent } from './note-editor/note-editor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 const routes: Routes = [
 {
@@ -21,7 +22,8 @@ const routes: Routes = [
     CommonModule,
     SharedModule,
     FormsModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+    CKEditorModule
   ]
 })
 export class NoteEditorModule { }

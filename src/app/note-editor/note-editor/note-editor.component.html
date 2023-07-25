@@ -1,21 +1,40 @@
-<div fxLayout="column">
+<div fxLayout="column" fxFlex="100">
 
-    <p>note-editor works!</p>
+    <h1>YAY !!!</h1>
+    <h2>Now We Will Note</h2>
+
+
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between center">
 
 
 
-<div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between center">
+        <ckeditor fxFlex="50"[editor]="Editor" [(ngModel)]="data" [config]="ckEditorConfig">
+        </ckeditor>
+
+        <div fxFlex="50" [innerHtml]="data">
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between center">
     <mat-form-field class="w-100-p" fxFlex>
         <mat-label>{{ 'START_TIME'  }}</mat-label>
-        <input matInput [(ngModel)]="test" required>
+        <input matInput [(ngModel)]="data" required>
     </mat-form-field>
     <mat-form-field class="w-100-p" fxFlex>
         <mat-label>{{ 'START_TIME'  }}</mat-label>
-        <input matInput [(ngModel)]="test" required>
+        <input matInput [(ngModel)]="data" required>
     </mat-form-field>
 
-</div>
+</div> -->
 
 
+<div fxLayoutAlign="center center" class="h-100 font-size-20">
+<span>See Ya 😉</span> 
 </div>
 

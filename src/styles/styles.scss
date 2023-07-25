@@ -4,41 +4,52 @@
 @import "../assets/fonts/ibm-plex-mono/stylesheet.css";
 @import "./utils/helpers";
 
-
 // $app-typography: mat-typography-config(
 // 	$font-family: '"IBM Plex Mono", Arial, sans-serif',
 // );
 // @include mat-core($app-typography);
 
 body {
-    font-family: 'IBM Plex Mono', sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'IBM Plex Mono', sans-serif;
-    /* Add any other custom styles for headings */
-  }
+  font-family: "IBM Plex Mono", sans-serif;
+}
 
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Mono", sans-serif;
+  /* Add any other custom styles for headings */
+}
 
 :host {
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
 
-  p {
-    margin: 0;
-  }
+p {
+  margin: 0;
+}
+
+//CkEditor
+.ck-editor__editable_inline {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.ck-placeholder {
+  font-size: 14px;
+}
