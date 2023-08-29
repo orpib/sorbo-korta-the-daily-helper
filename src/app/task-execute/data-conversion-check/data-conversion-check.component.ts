@@ -24,10 +24,6 @@ export class DataConversionCheckComponent implements OnInit {
     const adminSet = new Set<string>(this.convertedData);
 
 
-    const dif = adminSet.a
-
-
-    debugger
     //this.convertedData = convertedData
     
   }
