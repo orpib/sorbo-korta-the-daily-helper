@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CKEditorConfig } from '../../shared/configs/ckeditor.config';
+import { Clipboard } from '@angular/cdk/clipboard';
+
 @Component({
   selector: 'app-note-editor',
   templateUrl: './note-editor.component.html',
   styleUrls: ['./note-editor.component.scss'],
 })
 export class NoteEditorComponent implements OnInit {
-  constructor() {}
+  constructor(private clipboard : Clipboard ) {}
   data: any;
   public Editor = ClassicEditor;
   ckEditorConfig = {
@@ -33,4 +35,8 @@ export class NoteEditorComponent implements OnInit {
   };
 
   ngOnInit(): void {}
+
+  copyToClipboard() {
+    this.clipboard.copy(this.data);
+  }
 }

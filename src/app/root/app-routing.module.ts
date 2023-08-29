@@ -8,22 +8,36 @@ const routes: Routes = [
     redirectTo: '/note-editor',
     pathMatch: 'full',
     data: {
-        isFullScreen: true,
-        requiredFeature: 'login',
+      isFullScreen: true,
+      requiredFeature: 'login',
     },
-},
-{
-  path: 'note-editor',
-  loadChildren: () => import('../note-editor/note-editor.module').then((m) => m.NoteEditorModule),
-  data: {
+  },
+  {
+    path: 'note-editor',
+    loadChildren: () =>
+      import('../note-editor/note-editor.module').then(
+        (m) => m.NoteEditorModule
+      ),
+    data: {
       isFullScreen: true,
       isPublic: true,
-  }
-},
+    },
+  },
+  {
+    path: 'task',
+    loadChildren: () =>
+      import('../task-execute/task-execute.module').then(
+        (m) => m.TaskExecuteModule
+      ),
+    data: {
+      isFullScreen: true,
+      isPublic: true,
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
