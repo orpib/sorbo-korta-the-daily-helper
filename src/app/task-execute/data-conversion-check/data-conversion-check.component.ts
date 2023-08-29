@@ -15,6 +15,7 @@ export class DataConversionCheckComponent implements OnInit {
   ngOnInit(): void {
    // let test = data.EventParticipants.filter(x=> !x.PrimaryEmail);
     //this.convertedData = test.map(x=> x.PersonId);
+        //this.convertedData = convertedData
     let zurichData = ZURICH_eventList.map(x=> x.ItemId);
 
     const zurichSet = new Set(zurichData);
@@ -23,8 +24,6 @@ export class DataConversionCheckComponent implements OnInit {
 
     const adminSet = new Set<string>(this.convertedData);
 
-
-    //this.convertedData = convertedData
     
   }
 
